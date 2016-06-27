@@ -23,6 +23,8 @@ Provides fast, reliable and extensible starter for the development of Angular 2 
 - Manager of your type definitions using [typings](https://github.com/typings/typings).
 - Has autoprefixer and css-lint support.
 
+**NOTE:** This fork adds i18n and lodash core support
+
 # How to start
 
 **Note** that this seed project requires node v4.x.x or higher and npm 2.14.7.
