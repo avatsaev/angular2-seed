@@ -1,0 +1,9 @@
+{
+
+  "home" : {
+
+    "welcome": "Howdy {{at_twitter_handle}}! Welcome to the ultimate Angular2 template "
+
+  }
+
+}

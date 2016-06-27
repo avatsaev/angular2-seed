@@ -4,7 +4,7 @@ import { BaseRequestOptions, ConnectionBackend, Http, HTTP_PROVIDERS, Response, 
 import { MockBackend } from '@angular/http/testing';
 import { Observable } from 'rxjs/Observable';
 
-import { NameListService } from './name-list.service';
+import { NameListService } from '../app/shared/name-list.service';
 
 export function main() {
   describe('NameList Service', () => {

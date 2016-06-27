@@ -1,6 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, Injectable } from '@angular/core';
 import { ROUTER_DIRECTIVES } from '@angular/router';
+
 import { HTTP_PROVIDERS } from '@angular/http';
+
+
+import {  TRANSLATE_PROVIDERS,
+          TranslateService,
+          TranslatePipe,
+          TranslateLoader,
+          TranslateStaticLoader} from 'ng2-translate/ng2-translate';
 
 import { Config, NameListService, NavbarComponent, ToolbarComponent } from './shared/index';
 
@@ -15,8 +23,18 @@ import { Config, NameListService, NavbarComponent, ToolbarComponent } from './sh
   templateUrl: 'app.component.html',
   directives: [ROUTER_DIRECTIVES, NavbarComponent, ToolbarComponent]
 })
+
 export class AppComponent {
-  constructor() {
+
+  constructor(translate: TranslateService) {
+
     console.log('Environment config', Config);
+
+    let userLang = navigator.language.split('-')[0];
+
+    userLang = /(fr|en)/gi.test(userLang) ? userLang : 'en';
+    translate.setDefaultLang('en');
+    translate.use(userLang);
+
   }
 }

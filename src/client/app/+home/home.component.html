@@ -1,10 +1,14 @@
+
+<div>
+    <p>{{ 'home.welcome' | translate: {at_twitter_handle: "@avatsaev"} }}</p>
+</div>
+
 <p>
-  Howdy! Here's a list of awesome computer scientists.
-  Do you know any others? Add to the list yourself.
+  Currently {{nameListService.names.length}} names in the list.
 </p>
 
-<form (submit)="addName()">
-  <input [(ngModel)]="newName" name="newName" placeholder="Awesome Computer Scientist">
+<form (submit)="add_name()">
+  <input [(ngModel)]="new_name" name="new_name" placeholder="Awesome Computer Scientist">
   <button type="submit">Add</button>
 </form>
 

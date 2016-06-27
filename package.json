@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "Modular seed project for Angular 2 apps with fast, statically typed build",
   "repository": {
-    "url": "https://github.com/mgechev/angular2-seed"
+    "url": ""
   },
   "scripts": {
     "build.dev": "gulp build.dev --color",
@@ -32,7 +32,7 @@
     "webdriver-start": "webdriver-manager start",
     "webdriver-update": "webdriver-manager update"
   },
-  "author": "Minko Gechev <mgechev>",
+  "author": "Vatsaev Aslan (@avatsaev)",
   "license": "MIT",
   "devDependencies": {
     "async": "^1.4.2",
@@ -119,8 +119,13 @@
     "@angular/platform-browser": "2.0.0-rc.3",
     "@angular/platform-browser-dynamic": "2.0.0-rc.3",
     "@angular/router": "3.0.0-alpha.7",
-    "es6-module-loader": "^0.17.8",
     "core-js": "^2.4.0",
+    "es6-module-loader": "^0.17.8",
+    "lodash": "^4.13.1",
+    "lodash-inflection": "^1.4.0",
+    "moment": "^2.13.0",
+    "ng2-translate": "^2.2.2",
+    "pluralize": "^3.0.0",
     "rxjs": "5.0.0-beta.6",
     "systemjs": "0.19.26",
     "zone.js": "^0.6.12"

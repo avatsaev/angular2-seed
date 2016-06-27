@@ -20,9 +20,9 @@ import {
   RouterConfig
 } from '@angular/router';
 
-import { AppComponent } from './app.component';
-import { HomeComponent } from './+home/home.component';
-import { AboutComponent } from './+about/about.component';
+import { AppComponent } from '../app/app.component';
+import { HomeComponent } from '../app/+home/home.component';
+import { AboutComponent } from '../app/+about/about.component';
 
 export function main() {
 

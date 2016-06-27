@@ -2,36 +2,33 @@ import { Component } from '@angular/core';
 import { REACTIVE_FORM_DIRECTIVES } from '@angular/forms';
 
 import { NameListService } from '../shared/index';
+import { TranslatePipe } from 'ng2-translate/ng2-translate';
 
-/**
- * This class represents the lazy loaded HomeComponent.
- */
+
 @Component({
   moduleId: module.id,
   selector: 'sd-home',
   templateUrl: 'home.component.html',
   styleUrls: ['home.component.css'],
-  directives: [REACTIVE_FORM_DIRECTIVES]
+  directives: [REACTIVE_FORM_DIRECTIVES],
+  pipes: [TranslatePipe]
 })
+
 export class HomeComponent {
 
-  newName: string;
+  new_name:string;
 
-  /**
-   * Creates an instance of the HomeComponent with the injected
-   * NameListService.
-   *
-   * @param {NameListService} nameListService - The injected NameListService.
-   */
-  constructor(public nameListService: NameListService) {}
+  constructor(public nameListService: NameListService) {
 
-  /**
-   * Calls the add method of the NameListService with the current newName value of the form.
-   * @return {boolean} false to prevent default form submit behavior to refresh the page.
-   */
-  addName(): boolean {
-    this.nameListService.add(this.newName);
-    this.newName = '';
+    // LODASH USAGE
+
+    //console.log(_.flattenDeep([1, [2, [3, [4]], 5]]));
+
+  }
+
+  add_name(): boolean {
+    this.nameListService.add(`${this.new_name}`);
+    this.new_name = '';
     return false;
   }
 
